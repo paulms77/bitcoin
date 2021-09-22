@@ -116,7 +116,7 @@ while True:
             #print('ma5:',ma5)
             #ma20 = ma20('KRW-ETC').iloc[-1]
             #print('ma20:',ma20)
-            if (target_price < current_price) and (now_rsi < 28): # test1>0 and test2<0
+            if (now_rsi < 25): # test1>0 and test2<0
                 krw = get_balance('KRW')
                 if krw > 5000:
                     upbit.buy_market_order('KRW-ETC',krw*0.9995)
