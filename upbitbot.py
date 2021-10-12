@@ -80,7 +80,7 @@ def get_balance(ticker):
                 return 0
 
 def get_current_price(ticker):
-    return pyupbit.get_orderbook(tickers = ticker)[0]['orderbook_units'][0]['ask_price']   
+    return pyupbit.get_orderbook(ticker)[0]['orderbook_units'][0]['ask_price']   
 
 print('upbitbot start')
 
@@ -95,11 +95,13 @@ while True:
             print('='*10 +'[PAUL_v1(notice)]'+ '='*10)
             print('시작시간',start_time,'현재시간',now,'종료시간',end_time)
             target_price = get_target_price('KRW-ETC')
-            current_price = get_current_price('KRW-ETC')
-            print('현재가:',current_price)
+            #current_price = get_current_price('KRW-ETC')
+            #print('현재가:',current_price)
             now_rsi = rsi('KRW-ETC',14).iloc[-1]
             print('rsi:',now_rsi)
             krw = get_balance('KRW')
+            etc = get_balance('ETC')
+            print(etc)
             print(krw)
             #ma5 = ma5('KRW-ETC').iloc[-1]
             #print('ma5:',ma5)
