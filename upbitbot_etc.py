@@ -6,8 +6,8 @@ import datetime
 
 def load_upbit(name):
     if name == 'aws':
-        access = "CvFnCwIyggBX9GsIb3vx7ZD4a2MNx2gsGKOMTFHS" # Access key
-        secret = "Nrhwb9839AWQda8Le94aPYj9EQgtnVsBZaXdTxyO" # Secret Key
+        access = # Access key
+        secret = # Secret Key
         upbit = pyupbit.Upbit(access, secret) # key loading aws
     else:
         pass
